@@ -1,0 +1,110 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Inscripción</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Formulario de Inscripción</h1>
+    <p>Por favor llene este formulario con la información requerida</p>
+    <form action="https://register-demo.freecodecamp.org" method="post">
+      <fieldset>
+        <label for="first-name"
+          >Ponga su primer nombre:
+          <input
+            id="first-name"
+            for="first-name"
+            type="tex"
+            required
+            name="first-name"
+        /></label>
+        <label for="last-name"
+          >Ingrese su apellido:
+          <input id="last-name" type="text" required name="last-name"
+        /></label>
+        <label for="email"
+          >Introduce tu correo electrónico:
+          <input id="email" for="email" type="email" required name="email"
+        /></label>
+        <label for="new-password"
+          >Crear una nueva contraseña:
+          <input
+            id="new-password"
+            for="new-password"
+            type="password"
+            pattern="[a-z0-5]{8,}"
+            requerid
+            name="new-password"
+          />
+        </label>
+      </fieldset>
+      <fieldset>
+        <label id="personal-account" for="personal-account"
+          ><input
+            id="personal-account"
+            type="radio"
+            name="account-type"
+            class="inline"
+          />
+          Cuenta Personal</label
+        >
+        <label id="business-account" for="business-account"
+          ><input
+            id="business-account"
+            type="radio"
+            name="account-type"
+            class="inline"
+          />
+          Cuenta de Empresa</label
+        >
+        <label id="terms-and-conditions" for="terms-and-conditions"
+          ><input
+            id="terms-and-conditions"
+            type="checkbox"
+            required
+            name="terms"
+            class="inline"
+          />
+          Acepto los<a
+            href="https://www.freecodecamp.org/news/terms-of-service"
+          >
+            terminos y condiciones.</a
+          ></label
+        >
+      </fieldset>
+      <fieldset>
+        <label for="profile-picture"
+          >Sube una foto de perfil:
+          <input id="profile-picture" type="file" name="file"
+        /></label>
+        <label for="age"
+          >Ingresa tu edad (años):
+          <input id="age" type="number" min="13" max="120" name="age"
+        /></label>
+        <label for="referrer"
+          >¿Cómo te enteraste de nosotros?
+          <select id="referrer" name="referrer">
+            <option value="">(seleccione uno)</option>
+            <option value="1">Noticias de freeCodeCamp</option>
+            <option value="2">Canal YouTube freeCodeCamp</option>
+            <option value="3">Foro freeCodeCamp</option>
+            <option value="4">Otro</option>
+          </select>
+        </label>
+        <label for="bio"
+          >Proporcione una bio:
+          <textarea
+            id="bio"
+            rows="3"
+            cols="30"
+            placeholder="Me gusta programar en la playa..."
+            name="bio"
+          ></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
